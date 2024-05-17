@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BulkCrop</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #drop-area { border: 2px dashed #ccc; padding: 20px; text-align: center; cursor: pointer; }
+    #drop-area.hover { background-color: #f0f0f0; }
+    #status { margin-top: 20px; }
+    #file-list { margin-top: 10px; }
+    select { margin-top: 10px; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>BulkCrop</h1>
+  <div id="drop-area">
+    <p>Drag & Drop Images Here</p>
+    <input type="file" id="fileElem" multiple accept="image/*" style="display: none;">
+    <button onclick="document.getElementById('fileElem').click(); return false;">or Click to Upload</button>
+  </div>
+  <div id="status"></div>
+  <div id="file-list"></div>
+  <select id="aspect-ratio">
+    <option value="">Select Aspect Ratio</option>
+    <option value="16:9" selected>16:9 (Wide)</option>
+    <option value="4:3">4:3 (Standard)</option>
+    <option value="1:1">1:1 (Square)</option>
+  </select>
+  <button id="crop-button">Crop Image</button>
+  <script src="renderer.js"></script>
+</body>
+</html>

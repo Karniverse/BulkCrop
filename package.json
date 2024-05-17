@@ -1,0 +1,29 @@
+{
+  "name": "BulkCrop",
+  "version": "1.0.0",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rimraf dist",
+    "build": "npm run clean && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^13.6.9",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "sharp": "^0.29.1"
+  },
+  "build": {
+    "appId": "com.example.bulkcrop",
+    "productName": "BulkCrop",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "icon.ico"
+    }
+  }
+}
