@@ -23,7 +23,7 @@ To use BulkCrop, follow these steps:
 - Drag and drop images into the application window.
 - Select an aspect ratio from the dropdown menu.
 - Click the "Crop Image" button to crop all uploaded images according to the selected aspect ratio.
-- Cropped images will be saved to the default output directory.
+- Cropped images will be saved to the 'cropped' directory in desktop.
 
 ## Configuration
 
